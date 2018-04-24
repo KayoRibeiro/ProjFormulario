@@ -1,0 +1,48 @@
+
+   <!-- card Inicial -->
+    <div class="row" name="cartao">
+      <div class="col s4 offset-s4">
+        <div class="card">
+          <div class="card-image  waves-light">
+            <img  src="http://www.colegiovaz.com.br/imagens/menu-navegacao/contrato.jpg">
+          </div>
+          <div class="card-action">
+            <span class="card-title activator grey-text text-darken-4">Informações recebidas<i class="material-icons right">more_vert</i></span>
+            <span class="card-title grey-text text-darken-4"></span>
+              <p>Em até 48h daremos um retorno sobre a abertura de sua conta.<br> Para receber nossas recomendações de invertimento e começar a invertir precisamos conhcer seu perfil de investido.<br>São apenas 4 perguntas que irão guiar todas as suas decições de investimentos</p>
+              <span class="card-title grey-text text-darken-2"><h6>Você gostaria de responder ao Perfil de Investidor?</h6></span>
+              <p><button class=" btn waves-effect waves-light col l2" style="margin-right:10%; margin-left:25%" routerLink="formulario" id="sim">Sim</button></p>
+              <p><button data-target="modal1" class=" btn modal-trigger waves-effect waves-light" id="nao">Não</button></p>
+          </div>
+       
+          <div class="card-reveal">
+            <span class="card-title grey-text text-darken-4">Informações<i class="material-icons right">close</i></span>
+            <p>Lembre que sempre pode entrar em contato conosco por meio do Email: ------@--.com, ou na nossa central de atendimento 99999-9999 </p>
+          </div>
+        </div>
+      </div>  
+    </div>
+    
+
+  <!-- estrutura do Modal -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Termo de Uso</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vulputate in arcu tempor viverra. Fusce tincidunt euismod tincidunt. Nulla dapibus vulputate dui, a condimentum neque ultrices ut. Sed urna dolor, tristique vitae convallis eu, ultricies vitae nunc. Curabitur ut erat lacus. Nunc eu tortor eu eros interdum viverra. Curabitur consectetur.</p>
+      <input type="checkbox" class="filled-in" id="aceita"/>
+          <label for="aceita">Eu li e  concordo com os termoe e condições acima</label>
+    </div>
+    <div class="modal-footer">
+        <a routerLink="final" id="confirma" class="modal-action modal-close waves-effect waves-green btn-flat">Concordo</a>
+      <a routerLink="" class="modal-action modal-close waves-effect waves-green btn-flat">Voltar</a>
+    </div>
+  </div>
+            
+    <!-- container de Rotas -->
+      <div class="container">
+        <router-outlet></router-outlet>
+
+      </div>
+
+
+

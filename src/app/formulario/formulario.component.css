@@ -1,0 +1,14 @@
+.text {
+color: #8f629d;
+font-family: cursive;
+margin: 10%;
+}
+.titulo{
+color: rgba(76, 51, 119);
+font-family: cursive;
+margin: 3%;
+}
+
+.combo{
+    margin-left: 3%;
+}

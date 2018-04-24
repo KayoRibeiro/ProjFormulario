@@ -1,0 +1,73 @@
+<!-- perguntar de CheckBox  -->
+<div class ="row">
+  <form class="card col l9 push-l2" #formulario="ngForm" (ngSubmit)="onSubmit(formulario)" action="#">
+  <div class=" titulo col l12"><h5 class="center-align">PERFIL DO INVESTIDOR - QUESTIONÁRIO</h5></div>
+    <div *ngFor="let linha of perguntas; let i = index" class ="row">
+      <div  class=" col  l12">
+       <label class="text"><b><h5 class="center-align">{{linha.pergunta}}</h5></b></label> 
+      </div>
+      <div class="col  l4">
+        <p>
+          <input type="checkbox" class="filled-in" id="{{linha.id_1}}" [attr.data-index]="i" name="checkbox_resposta" ngModel/>
+          <label for="{{linha.id_1}}">{{linha.resposta_1}}</label>
+        </p>
+      </div>  
+      <div class=" col  l4">
+        <p>
+          <input type="checkbox" class="filled-in" id="{{linha.id_2}}" [attr.data-index]="i" name="checkbox_resposta" ngModel />
+          <label for="{{linha.id_2}}">{{linha.resposta_2}}</label>
+        </p>
+      </div> 
+      <div class=" col  l4">
+        <p>
+          <input type="checkbox" class="filled-in" id="{{linha.id_3}}" [attr.data-index]="i" name="checkbox_resposta" ngModel/>
+          <label for="{{linha.id_3}}">{{linha.resposta_3}}</label>
+        </p>
+      </div> 
+    </div>
+
+    <!-- quarta pergunta ComboBox -->
+    <div class="row">
+        <div  class=" col  l12">
+            <label class="text"><b><h5 class="center-align"> Qual sua familiaridade com os tipos de investimentos a baixo?<br> Leve em consideração o valor aplicado nos últimos 2 anos</h5></b></label> 
+        </div>
+        <div class="input-field col l5" style="margin-left:5%" >
+            <select name="combobox_resposta" >
+              <option value="" disabled selected>Escolha uma opção</option>
+              <option *ngFor="let option of options; let i = index" [attr.value]="i">{{option}}</option>             
+            </select>
+            <label>Títulos de renda  fixa ou tesouro direto</label>
+        </div>
+        <div class="input-field col l5" style="margin-left:5%">
+            <select name="combobox_resposta" >
+              <option value="" disabled selected>Escolha uma opção</option>
+              <option *ngFor="let option of options; let i = index" [attr.value]="i">{{option}}</option>             
+            </select>
+            <label>Fluxo de investimentos</label>
+        </div>
+        <div class="input-field col l5" style="margin-left:5%" >
+            <select name="combobox_resposta" >
+              <option value="" disabled selected>Escolha uma opção</option>
+              <option *ngFor="let option of options; let i = index" [attr.value]="i">{{option}}</option>             
+            </select>
+            <label>Ações a vista</label>
+        </div>
+        <div class="input-field col l5" style="margin-left:5%">
+            <select name="combobox_resposta" >
+              <option value="" disabled selected>Escolha uma opção</option>
+              <option *ngFor="let option of options; let i = index" [attr.value]="i">{{option}}</option>             
+            </select>
+            <label>Aluguel de ações termos opções e futuros</label>
+        </div>       
+    </div>
+    <!-- submit de Formulario -->
+    <div class="row">
+        <div class="col s9 offset-s2">
+            <a class="waves-effect waves-light btn col l5" routerLink=""name="voltar">Voltar</a>
+          <button routerLink="final" class="btn waves-effect waves-light col l5" type="submit" name="action">Submit
+              <i class="material-icons right">send</i>
+          </button>
+      </div>
+    </div>
+  </form>
+</div>
